@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('vadim-sherbakov-d6ebY-faOO0-unsplash (1).jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align:center;
+  color: #0099cc;
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.modal-content {
+  background-color:rgba(255, 255, 255, 0.8);;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.close {
+  color: #0099cc;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+label {
+  color: #0099cc;
+  font-weight: bold;
+  display: block;
+  margin: 8px 0;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #0099cc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #0099cc;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0077aa;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.container:last-child {
+  background-color: #f1f1f1;
+}
+
+.cancelbtn {
+  background-color: #cc0000;
+  color: #fff;
+  font-weight: bold;
+}
+
+.psw a {
+  color: #0099cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.psw a:hover {
+  text-decoration: underline;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+<div>
+  
+  <form class="modal-content animate" action="login.jsp">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <h2>Login Form</h2>
+    </div>
+
+    <div class="container">
+      <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="email" required>
+
+      <label for="pswd"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pswd" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+</script>
+
+</body>
+</html>
+
